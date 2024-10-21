@@ -1,0 +1,136 @@
+#search-container {
+  position: relative;
+  background-image: url("img/background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  width: 100%;
+  padding: 80px 160px;
+}
+
+#search-container::before {
+  content: ""; /* Necesario para que el pseudo-elemento aparezca */
+  position: absolute; /* Posiciona la capa de color */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Color sólido con opacidad del 50% */
+  z-index: 1; /* Asegura que la capa de color esté encima del fondo */
+}
+
+#header-container {
+  position: relative;
+  z-index: 2;
+}
+
+#results-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+#pokemon-logo {
+  width: 50%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.no-show {
+  display: none !important;
+}
+
+#card {
+    width: 60%;
+}
+
+#li-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+#play-button {
+  width: 40px;
+  height: 40px;
+}
+
+.miniature {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(31, 37, 95);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+form {
+  width: 100%;
+}
+
+#pictures {
+    background-color: rgb(255,203,4,0.5);
+    padding: 8px 0;
+}
+
+#card-content { 
+    margin-right: 0; 
+     margin-left: 0; 
+}
+
+h1, h5 {
+    text-align: center;
+}
+
+#not-found {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 560px) {
+    #card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) { 
+    #search-container {
+        padding: 40px 40px;
+      }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    #results-container {
+      margin: 20px auto;
+    }
+    
+}
+
